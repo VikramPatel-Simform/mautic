@@ -18,3 +18,5 @@ phases:
       - docker push 572954863672.dkr.ecr.ap-south-1.amazonaws.com/$IMAGE_REPO_NAME
       - echo write definitions file...
       - printf '[{"name":"mautic-pipeline","imageUri":"%s"}]' 572954863672.dkr.ecr.ap-south-1.amazonaws.com/$IMAGE_REPO_NAME > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
